@@ -1,0 +1,1118 @@
+@font-face {
+    font-family: 'beer money';
+    src: url('./../fonts/beer-money.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('./../fonts/SF-Pro-Display-Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('./../fonts/SF-Pro-Display-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('./../fonts/SF-Pro-Display-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('./../fonts/SF-Pro-Display-Semibold.otf') format('opentype');
+    font-weight: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.page {
+    margin: 0 auto;
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    background: #F5F2EC;
+}
+
+.block-title {
+    margin: auto;
+    font: 400 96px/100px 'beer money', sans-serif;
+    color: #222222;
+}
+
+.text {
+    width: 100%;
+    font: 300 24px/32px 'SF Pro Display', sans-serif;
+    color: #222222;
+}
+
+.button {
+    padding: 39px 73px;
+    font: 600 20px/0px 'SF Pro Display', sans-serif;
+    text-transform: uppercase;
+    color: #222222;
+    background: #F1641D;
+    box-shadow: 0px 4px 0px #000000;
+    border-radius: 50px;
+}
+
+.button:hover {
+    background: #FFBA52;
+}
+
+.color-navy {
+    color: #3223E3E5;
+}
+
+.color-blue {
+    color: #5EB1FDE5;
+}
+
+.color-crimson {
+    color: #DA3058;
+}
+
+.color-green {
+    color: #4CCD7F;
+}
+
+.color-orange {
+    color: #F1641D;
+}
+
+.header {
+    margin: auto;
+    padding: 52px 0 81.4px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 77.3%;
+}
+
+.hamburger {
+    position: relative;
+    display: none;
+    width: 25px;
+    height: 18px;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+.hamburger__line {
+    position: absolute;
+    top: 7px;
+    height: 4px;
+    width: 100%;
+    background-color: #F1641D;
+    opacity: 1;
+    display: block;
+    transition: all 0.1s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #F1641D;
+    transition: all 0.4s ease-in-out;
+}
+
+.hamburger::before {
+    top: 0;
+    transform-origin: center top;
+}
+
+.hamburger::after {
+    top: 14px;
+    transform-origin: center bottom;
+}
+
+.menu_open .hamburger::before {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.menu_open .hamburger::after {
+    transform: rotate(-45deg);
+    top: 7px;
+}
+
+.menu_open .hamburger__line {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    width: 44.05%;
+}
+
+.menu__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__link {
+    font: 400 25px/31px 'beer money', sans-serif;
+    color: #222222;
+    text-decoration-color: #00000000;
+}
+
+.menu__link:hover {
+    text-underline-offset: 2px;
+    text-decoration: underline 1px #222222;
+}
+
+.header__phone-call {
+    font: 400 20px/0px 'SF Pro Display', sans-serif;
+    color: #222222;
+    background: #F5F2EC;
+    padding: 19.5px 27px;
+    border: 1px solid #222222;
+    border-radius: 100px;
+}
+
+.resume {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.resume__content {
+    padding: 11px 0 0 11.56%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.resume__organisation-text {
+    font: 500 20px/24px 'SF Pro Display', sans-serif;
+    letter-spacing: 0.2em;
+    color: #222222;
+}
+
+.resume__header {
+    padding: 14px 0 37px 0;
+    font: 400 150px/150px 'beer money', sans-serif;
+    color: #3223E3E5;
+}
+
+.resume__text {
+    width: 643px;
+    padding: 35px 18px 40px 38px;
+    margin-bottom: 65px;
+    background: #B3B2F2;
+    border-radius: 15px;
+    transform: matrix(1, -0.05, 0.05, 1, 0, 0);
+}
+
+.resume__line {
+    padding: 108px 0 39px 0;
+    width: 100%;
+}
+
+.resume__line-mobile {
+    display: none;
+}
+
+.resume__picture-drawing {
+    position: absolute;
+    left: 56.9%;
+    width: 38.3%;
+    z-index: 0;
+}
+
+.resume__picture-star {
+    position: absolute;
+    left: 54.79%;
+    top: 565px;
+}
+
+.activities {
+    position: relative;
+    width: 100%;
+}
+
+.activities__picture-star {
+    position: absolute;
+    left: 79.6%;
+    top: 65%;
+    width: 15.5%;
+    z-index: 0;
+}
+
+.activities__content {
+    padding-left: 11.45%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+}
+
+.activities__header {
+    width: 100%;
+    padding-bottom: 15px;
+    font: 400 40px/44px 'beer money', sans-serif;
+    color: #222222;
+}
+
+.activities__specialize {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.activities__picture-specialize {
+    padding: 2.22% 0 7% 0;
+    width: 100%;
+    max-width: 700px;
+}
+
+.activities__help {
+    margin-right: 1.95%;
+    width: 28.6%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.activities__picture-help {
+    padding-bottom: 4.6%;
+    width: 100%;
+    max-width: 700px;
+}
+
+.activities__autism {
+    width: 25.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.activities__picture-autism {
+    padding: 3.8% 0 9% 0;
+    width: 100%;
+    max-width: 700px;
+}
+
+.activities__line {
+    padding: 65px 0 72px 0;
+    width: 100%;
+}
+
+.activities__line-mobile {
+    display: none;
+}
+
+.specialists {
+    position: relative;
+    width: 100%;
+}
+
+.specialists__content {
+    width: 77%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+}
+
+.specialists__picture-star-head {
+    position: absolute;
+    left: 8%;
+    top: 1%;
+    width: 9%;
+    max-width: 173px;
+}
+
+.specialists__picture-star {
+    position: absolute;
+    left: 71.8%;
+    top: 92.5%;
+    width: 3.7%;
+    max-width: 73px;
+}
+
+.specialists__specialist-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.specialists__anna-info {
+    padding-top: 12px;
+    width: 49.4%;
+}
+
+.specialists__title {
+    position: relative;
+    font: 400 60px/60px 'beer money', sans-serif;
+    color: #222222;
+    z-index: 2;
+}
+
+.specialists__picture-anna {
+    width: 37.5%;
+    min-width: 470px;
+    height: 100%;
+    margin-top: -22px;
+}
+
+.specialists__picture-anna-mobile {
+    display: none;
+}
+
+.specialists__anna-resume {
+    position: relative;
+    width: 86%;
+    margin-top: 15px;
+    padding: 17px 26px 18px 37px;
+    font: 400 20px/28px 'SF Pro Display', sans-serif;
+    color: #222222;
+    background: #B3B2F2;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.specialists__anna-text {
+    position: relative;
+    width: 100%;
+    margin-top: 35px;
+    padding: 38px 38px 48px 37px;
+    background: #EBE1D7;
+    border-radius: 15px;
+}
+
+.specialists__picture-olga {
+    position: absolute;
+    left: 60.5%;
+    top: 52.2%;
+    width: 28%;
+    min-width: 470px;
+}
+
+.specialists__picture-olga-mobile {
+    display: none;
+}
+
+.specialists__olga-resume {
+    position: relative;
+    width: 32.8%;
+    margin-top: 33.57px;
+    padding: 26px 61px 27px 36px;
+    font: 400 20px/28px 'SF Pro Display', sans-serif;
+    color: #FFFFFF;
+    background: #44B571;
+    border-radius: 15px;
+    z-index: 3;
+}
+
+.specialists__olga-text {
+    width: 54.7%;
+    margin-top: 35px;
+    padding: 40px 108px 39px 36px;
+    background: #EBE1D7;
+    border-radius: 15px;
+}
+
+.specialists__line {
+    width: 100%;
+}
+
+.help {
+    width: 77%;
+    margin: 0 auto;
+    padding-bottom: 292px;
+    display: flex;
+    flex-direction: column;
+    gap: 83px;
+}
+
+.help__heading {
+    padding-left: 98px;
+    margin: 0;
+}
+
+.help__content {
+    display: flex;
+    gap: 48px;
+}
+
+.help__volonteer {
+    width: 67.8%;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+}
+
+.help__volonteer-picture-block {
+    display: flex;
+    gap: 64px;
+}
+
+.help__picture {
+    width: 46.8%;
+    height: 100%;
+}
+
+.help__picture-mobile {
+    display: none;
+}
+
+.help__volonteer-text-block {
+    width: 98%;
+    padding: 74px 17.7% 88px 62px;
+    border-radius: 40px;
+    border-top-right-radius: 220px;
+    background: #B3B2F2;
+}
+
+.help__title {
+    padding-bottom: 26px;
+    font: 600 36px/44px 'Inter', sans-serif;
+    color: #222222;
+}
+
+.help__title-donate {
+    max-width: 296px;
+    color: #FFFFFF;
+}
+
+.help__donate {
+    width: 21.8%;
+    min-width: 428px;
+    padding: 91px 47px 171px 58px;
+    border-radius: 40px;
+    border-bottom-left-radius: 220px;
+    background: #44B571;
+}
+
+.help__donate-text {
+    padding: 7px 0 82px 0;
+    color: #FFFFFF;
+}
+
+.help__button {
+    padding: 39px 59px;
+}
+
+.contacts {
+    position: relative;
+    width: 77%;
+    margin: 0 auto;
+    padding-bottom: 102px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.contacts__content {
+    width: 560px;
+    padding-top: 80px;
+}
+
+.contacts__information {
+    padding: 69px 0 19px 0;
+    font: 300 36px/43px 'SF Pro Display', sans-serif;
+    color: #222222;
+}
+
+.contacts__address {
+    padding: 0 0 33px 0;
+}
+
+.contacts__map {
+    width: 725px;
+    height: 795px;
+    border-radius: 50px;
+}
+
+.contacts__picture-star {
+    position: absolute;
+    left: 19.7%;
+    top: -3%;
+}
+
+.footer {
+    position: relative;
+    background: #B3B2F2;
+    width: 100%;
+}
+
+.footer__content {
+    width: 77%;
+    margin: 0 auto;
+    padding: 38px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 33.8%;
+}
+
+.footer__picture-vk {
+    position: absolute;
+    top: 29%;
+    left: 48.6%;
+}
+
+.footer__phone-call {
+    font: 400 20px/0px 'SF Pro Display', sans-serif;
+    color: #222222;
+    border: 1px solid #222222;
+    border-radius: 100px;
+    padding: 19.5px 27px;
+    background: #B3B2F2;
+}
+
+@media screen and (max-width: 1700px) {
+    .specialists__olga-text {
+        width: 62.6%;
+        padding-right: 7%;
+    }
+
+    .help__content {
+        flex-wrap: wrap;
+    }
+
+    .help__volonteer {
+        width: 100%;
+    }
+
+    .help__volonteer-picture-block {
+        gap: 6.3%;
+    }
+
+    .help__title-donate {
+        max-width: 100%;
+    }
+
+    .help__volonteer-text-block {
+        width: 100%;
+    }
+
+    .help__donate {
+        width: 100%;
+        padding-bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header {
+        margin: 0;
+        position: relative;
+        justify-content: flex-end;
+        padding: 27px 0;
+        width: 100%;
+    }
+
+    .menu {
+        position: fixed;
+        padding: 18px 29px 12px 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        justify-content: flex-end;
+        background: #F5F2EC;
+        z-index: 7;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu__list {
+        padding: 20px 0;
+        display: none;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        background: #F5F2EC;
+    }
+
+    .menu_open .menu__list {
+        display: flex;
+    }
+
+    .menu .menu__link {
+        text-align: center;
+    }
+
+    .header__phone-call {
+        display: none;
+    }
+
+    .resume__content {
+        padding: 0;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .resume__organisation-text {
+        display: none;
+    }
+
+    .resume__header {
+        width: 550px;
+        padding: 0 0 300px 0;
+        font: 400 150px/120px 'beer money', sans-serif;
+        text-align: center;
+    }
+
+    .resume__text {
+        width: 80%;
+    }
+
+    .resume__picture-drawing {
+        left: 8.9%;
+        top: 5%;
+        width: 84%;
+        max-width: 730px;
+    }
+
+    .resume__picture-star {
+        width: 33px;
+        left: 84%;
+        top: 290px;
+    }
+
+    .activities__content {
+        padding-left: 7%;
+        flex-direction: column;
+    }
+
+    .activities__specialize,
+    .activities__help,
+    .activities__autism {
+        width: 92%;
+    }
+
+    .activities__picture-star {
+        position: absolute;
+        left: 69.5%;
+        top: 58%;
+        width: 21%;
+        z-index: 2;
+    }
+
+    .block-title,
+    .specialists__title {
+        font: 400 50px/60px 'beer money', sans-serif;
+    }
+
+    .specialists {
+        padding-top: 29px;
+        background: #EBE1D7;
+        border-radius: 38px;
+    }
+
+    .specialists__content {
+        width: 85%;
+        gap: 30px;
+    }
+
+    .specialists__specialist-wrapper {
+        flex-direction: column;
+    }
+
+    .specialists__picture-anna {
+        display: none;
+    }
+
+    .specialists__picture-anna-mobile {
+        display: block;
+        position: absolute;
+        margin: 0;
+        left: 7%;
+        top: 230px;
+        width: 85.5%;
+        max-width: 580px;
+        height: auto;
+        z-index: 1;
+    }
+
+    .specialists__anna-info {
+        padding: 0;
+        width: 100%;
+    }
+
+    .specialists__anna-resume {
+        padding: 10px 20px;
+        width: auto;
+        margin-left: 42%;
+    }
+
+    .specialists__anna-text {
+        width: 100%;
+        margin-top: 430px;
+        padding: 72px 28px 23px 19px;
+        background: url('./../images/specialists_anna_text_background.png');
+        background-size: cover;
+    }
+
+    .specialists__picture-star-head {
+        position: absolute;
+        left: 8%;
+        top: 8%;
+        width: 12%;
+    }
+
+    .specialists__title-olga {
+        padding-top: 35px;
+    }
+
+    .specialists__olga-resume {
+        width: auto;
+        margin-left: 42%;
+        margin-top: 15px;
+        padding: 10px 30px 14px 20px;
+    }
+
+    .specialists__picture-olga {
+        display: none;
+    }
+
+    .specialists__picture-olga-mobile {
+        display: block;
+        position: absolute;
+        margin: 0;
+        left: 10%;
+        top: 56%;
+        width: 82%;
+        max-width: 580px;
+        height: auto;
+        z-index: 1;
+    }
+
+    .specialists__olga-text {
+        width: 100%;
+        margin-top: 490px;
+        padding: 58px 12px 23px 21px;
+        background: url('./../images/specialists_olga_text_background.png');
+        background-size: cover;
+    }
+
+    .specialists__picture-star {
+        position: absolute;
+        left: 87%;
+        top: 83.5%;
+        width: 9.8%;
+    }
+
+    .help {
+        width: 92%;
+        padding: 58px 0 29px 0;
+        gap: 20px;
+    }
+
+    .contacts {
+        width: 85%;
+        flex-direction: column;
+        gap: 53px;
+    }
+
+    .contacts__content {
+        width: 100%;
+        padding: 25px 0 0 15px;
+    }
+
+    .contacts__map {
+        width: 100%;
+        height: 500px;
+        border-radius: 19px;
+    }
+
+    .contacts__picture-star {
+        position: absolute;
+        left: 35%;
+        top: 0;
+        width: 12.5%;
+    }
+
+    .specialists__line {
+        display: none;
+    }
+
+    .footer__content {
+        width: 100%;
+        margin: 0 auto;
+        padding: 31px 30px;
+    }
+
+    .footer__menu {
+        width: 53.8%;
+    }
+
+    .footer__picture-vk {
+        left: 57.6%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+
+    .menu__link_mobile {
+        font: 400 18px/15px 'beer money', sans-serif;
+    }
+
+    .footer__picture-vk {
+        width: 26px;
+        top: 35%;
+    }
+
+    .footer__phone-call {
+        font: 400 14px/0px 'SF Pro Display', sans-serif;
+        border-radius: 40px;
+        padding: 16px 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .resume__header {
+        width: 300px;
+        padding: 0 0 228px 0;
+        font: 400 75px/57px 'beer money', sans-serif;
+    }
+
+    .button {
+        padding: 28.5px 61.86px;
+        font: 500 16px/0px 'SF Pro Display', sans-serif;
+        z-index: 1;
+    }
+
+    .resume__text {
+        width: 325px;
+        padding: 17.52px 10.92px 21px 20px;
+        margin-bottom: 3px;
+        border-radius: 7px;
+        z-index: 0;
+    }
+
+    .text {
+        font: 300 12px/16px 'SF Pro Display', sans-serif;
+    }
+
+    .resume__picture-drawing {
+        max-width: 485px;
+    }
+
+    .resume__line {
+        display: none;
+    }
+
+    .resume__line-mobile {
+        display: block;
+        width: 100%;
+        padding: 20px 0 16px 0;
+    }
+
+    .activities__header {
+        padding-bottom: 15px;
+        font: 400 26px/32px 'beer money', sans-serif;
+    }
+
+    .activities__specialize,
+    .activities__help,
+    .activities__autism {
+        max-width: 452px;
+    }
+
+    .activities__picture-star {
+        top: 61.1%;
+    }
+
+    .activities__text {
+        font: 300 16px/19px 'SF Pro Display', sans-serif;
+    }
+
+    .activities__picture-autism {
+        padding: 5px 0 10px 0;
+        width: 100%;
+    }
+
+    .activities__line {
+        display: none;
+    }
+
+    .activities__line-mobile {
+        display: block;
+        width: 100%;
+        padding: 0 0 21px 0;
+    }
+
+    .block-title {
+        font: 400 30px/30px 'beer money', sans-serif;
+    }
+
+    .specialists__title {
+        font: 400 26px/26px 'beer money', sans-serif;
+    }
+
+    .specialists__picture-anna-mobile {
+        max-width: 350px;
+        top: 12.1%;
+    }
+
+    .specialists__anna-resume {
+        padding: 8px 12px;
+        font: 300 10px/12px 'SF Pro Display', sans-serif;
+        border-radius: 7px;
+    }
+
+    .specialists__anna-text {
+        margin-top: 231px;
+        font: 300 12px/14px 'SF Pro Display', sans-serif;
+        border-radius: 12px;
+    }
+
+    .specialists__picture-star-head {
+        top: 12.3%;
+    }
+    
+    .specialists__olga-resume {
+        font: 300 10px/12px 'SF Pro Display', sans-serif;
+        border-radius: 10px;
+    }
+
+    .specialists__picture-olga-mobile {
+        top: 62.3%;
+        max-width: 320px;
+    }
+
+    .specialists__olga-text {
+        margin-top: 240px;
+        font: 300 12px/14px 'SF Pro Display', sans-serif;
+    }
+
+    .help__heading {
+        padding: 0;
+        margin: 0 auto;
+        width: 70%;
+        font: 400 30px/27px 'beer money', sans-serif;
+        text-align: center;
+    }
+
+    .help__volonteer {
+        width: 40.5%;
+    }
+
+    .help__volonteer-picture-block {
+        display: none;
+    }
+
+    .help__content {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .help__picture-mobile {
+        display: block;
+    }
+
+    .help__volonteer-text-block {
+        width: 100%;
+        padding: 17px 15px 29px 15px;
+        border-radius: 15px 50px 15px 15px;
+    }
+
+    .help__title {
+        padding: 16px 0 9px 0;
+        font: 600 12px/15px 'Inter', sans-serif;
+    }
+
+    .help__donate {
+        width: 46%;
+        min-width: 165px;
+        padding: 16px 7px 29px 17px;
+        border-radius: 15px 15px 15px 50px;
+    }
+
+    .help__donate-text {
+        padding: 0 0 16px 0;
+        font: 300 12px/14px 'SF Pro Display', sans-serif;
+    }
+
+    .help__button {
+        padding: 15px 20px;
+        font: 500 10px/0px 'SF Pro Display', sans-serif;
+        box-shadow: 0px 1.26757px 0px
+    }
+
+    .contacts {
+        padding: 0 0 9px 0;
+    }
+
+    .contacts__information {
+        padding: 23px 0 7px 0;
+        font: 300 16px/19px 'SF Pro Display', sans-serif;
+    }
+
+    .contacts__address {
+        padding: 0 0 7px 0;
+    }
+
+    .contacts__text {
+        font: 300 10px/13px 'SF Pro Display', sans-serif;
+    }
+
+    .contacts__map {
+        height: 139px;
+    }
+
+    .footer {
+        background: #F5F2EC;
+    }
+
+    .menu__link_mobile {
+        font: 400 12px/15px 'beer money', sans-serif;
+    }
+
+    .footer__picture-vk {
+        width: 18px;
+        top: 38%;
+    }
+
+    .footer__phone-call {
+        font: 400 8px/0px 'SF Pro Display', sans-serif;
+        border-radius: 40px;
+        padding: 8px 11px;
+        background: #F5F2EC;
+    }
+}
